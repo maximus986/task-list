@@ -1,1 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    box-shadow: 0 0 0 1px #ccc;
+    border-radius: 0;
+}
+
+.form-control {
+    background-color: inherit;
+    background-clip: padding-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding-left: 0;
+}
+
+.form-control::placeholder {
+    color: #cbced1;
+}
+
+.form-control:focus {
+    color: none;
+    background-color: none;
+    border-color: #b5bbc0;
+    outline: none;
+    box-shadow: none;
+    outline-color: #495057;
+}
+
+
+
