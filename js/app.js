@@ -10,6 +10,7 @@
 
     function loadEventListeners() {
         form.addEventListener("submit", addTask);
+        tasksList.addEventListener("click", deleteTask);
     }
 
     function addTask(e) {
@@ -26,10 +27,17 @@
             deleteTask.innerHTML = "<i class='fa fa-trash-alt text-dark'></i>";
             li.appendChild(deleteTask);
             tasksList.appendChild(li);
-            console.log(li);
             taskInput.value = "";
         }
         e.preventDefault();
+    }
+
+    function deleteTask(e) {
+        if (e.target.parentElement.classList.contains("delete-task")) {
+            if (confirm("Are you sure?")) {
+                e.target.parentElement.parentElement.remove();
+            }
+        }
     }
 })();
 
