@@ -11,6 +11,7 @@
     function loadEventListeners() {
         form.addEventListener("submit", addTask);
         tasksList.addEventListener("click", deleteTask);
+        clearTasksBtn.addEventListener("click", clearTasks);
     }
 
     function addTask(e) {
@@ -39,5 +40,12 @@
             }
         }
     }
+
+    function clearTasks() {
+        while (tasksList.firstChild) {
+            tasksList.removeChild(tasksList.firstChild);
+        }
+    }
+
 })();
 
