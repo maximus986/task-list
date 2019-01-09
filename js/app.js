@@ -24,7 +24,7 @@
             li.appendChild(liTask);
             const deleteTask = document.createElement("a");
             deleteTask.className = "delete-task";
-            //deleteTask.setAttribute("href", "#");
+            deleteTask.setAttribute("href", "#");
             deleteTask.innerHTML = "<i class='fa fa-trash-alt text-dark'></i>";
             li.appendChild(deleteTask);
             tasksList.appendChild(li);
