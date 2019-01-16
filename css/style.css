@@ -40,5 +40,20 @@ a:hover {
     outline-color: #495057;
 }
 
+.list-group-item:hover, 
+.list-group-item:focus {
+    z-index: 1;
+    text-decoration: none; 
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.done:hover,
+.done:focus {
+    text-decoration: line-through;
+}
+
 
 

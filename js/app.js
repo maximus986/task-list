@@ -94,6 +94,13 @@
         deleteTask.innerHTML = "<i class='fa fa-trash-alt text-dark'></i>";
         li.appendChild(deleteTask);
         tasksList.appendChild(li);
+        li.addEventListener("click", function (e) {
+            this.classList.toggle("done");
+            if (e.target.parentElement.classList.contains("delete-task")) {
+                this.classList.toggle("done");
+            }
+        });
+
     }
 
     function checkStorage() {
