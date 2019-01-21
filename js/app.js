@@ -61,7 +61,7 @@
     function removeTaskFromLocalStorage(taskItem) {
         checkStorage();
         tasks.forEach((task, index) => {
-            if (taskItem.textContent === task) {
+            if (taskItem.textContent === task.task) {
                 tasks.splice(index, 1);
             }
         });
@@ -108,7 +108,6 @@
             if (e.target.parentElement.classList.contains("delete-task")) {
                 this.classList.toggle("done");
             }
-
             if (this.classList.contains("done")) {
                 status = true;
             } else {
